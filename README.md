@@ -1,2 +1,2 @@
 # wallpaperChanger
-Uses National Geographics photo of the day t ochange your wallpaper
+Uses National Geographics photo of the day to change your wallpaper
