@@ -1,11 +1,16 @@
 import os, requests, bs4
 
 # Make image download location
-def cd(path):
-    os.chdir(os.path.expanduser(path))
+opersys = os.name
+# check if the OS is Windows or Linux
+if opersys == 'nt':
+    home = os.environ['HOMEPATH']
+else:
+    home = os.environ['HOME']
+os.chdir(home)
 os.makedirs('wikipedia', exist_ok=True)
 
-url = requests.get('https://en.wikipedia.org/wiki/Special:Random')
+url = 'https://en.wikipedia.org/wiki/Special:Random'
 # download page
 res = requests.get(url)
 res.raise_for_status()
